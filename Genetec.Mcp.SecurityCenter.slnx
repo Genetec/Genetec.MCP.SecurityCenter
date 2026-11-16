@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Genetec.Mcp.SecurityCenter/Genetec.Mcp.SecurityCenter.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Genetec.Mcp.SecurityCenter.UnitTests/Genetec.Mcp.SecurityCenter.UnitTests.csproj" />
+    <Project Path="tests/Genetec.Mcp.SecurityCenter.IntegrationTests/Genetec.Mcp.SecurityCenter.IntegrationTests.csproj" />
+  </Folder>
+</Solution>

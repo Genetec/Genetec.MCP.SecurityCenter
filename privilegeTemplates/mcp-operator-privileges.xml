@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='utf-8'?>
+<PrivilegeTemplates>
+  <!-- Custom template: built-in Operator privileges plus SDK logon, with Config Tool and Security Desk logon denied. -->
+  <!-- Apply to a non-administrator account/group; administrator status and partition access are configured separately. -->
+  <Template Id="bc798c58-5e14-4774-afab-736e2f269251" Name="MCP Operator" Description="Operator privileges plus SDK logon, with Config Tool and Security Desk logon denied. Use with a non-administrator account and restricted partition access." IsActive="true">
+    <!-- SDK logon (REST/Web SDK uses SDK access). -->
+    <p i="7ab29b46-f363-4cad-9e05-1bcb9b65d49c" s="G" />
+    <!-- Run Config Tool -->
+    <p i="1b03c89e-0b02-4d68-b281-ef5a4f76146c" s="D" />
+    <!-- Run Security Desk -->
+    <p i="5c9348a7-faa7-4aa1-b8a9-d0761a7be118" s="D" />
+    <!-- Remaining built-in Operator snapshot. G = granted; D = denied. Unlisted privileges are not granted by this template. -->
+    <p i="90f53026-c65a-4622-9153-01bc813efd7b" s="G" />
+    <p i="e06ecf58-bfce-42c6-890a-c4761158bd20" s="G" />
+    <p i="fa60a172-33e1-433e-aaff-cdbe0355706d" s="G" />
+    <p i="f0a14c2e-0bbe-49b0-9d7a-7869e61af733" s="G" />
+    <p i="e6206b60-23e8-4466-8493-1418f088e7a9" s="G" />
+    <p i="b1e51df7-a180-4cde-90c7-6f925b819838" s="G" />
+    <p i="09f6cec5-c339-4248-b675-3ef52fd5883a" s="G" />
+    <p i="47fab8f5-db1a-4754-aa89-4da5d01c10ff" s="G" />
+    <!-- Add bookmarks -->
+    <p i="e1903181-5e04-4d52-bc6e-8212d11cf161" s="G" />
+    <!-- Edit bookmarks -->
+    <p i="ef693a66-be97-4b1e-bd45-bcc893639925" s="G" />
+    <!-- Delete bookmarks -->
+    <p i="416b7e52-9bf5-470e-8cad-c633e4e7b0ad" s="G" />
+    <!-- Create incidents -->
+    <p i="7ef737f9-44e3-47bc-a54a-8fa0121cefca" s="G" />
+    <!-- Modify incidents-->
+    <p i="6f10e487-5356-4ffa-8e1e-f169841a63ad" s="G" />
+    <!-- Delete incidents -->
+    <p i="c86bc49c-1ab8-4bf5-bb17-556a19253232" s="G" />
+    <p i="e482f500-7355-4466-8a24-655ccf1c4158" s="G" />
+    <p i="4c1d911f-b123-44fb-8a37-487b8532fc14" s="G" />
+    <p i="6c5daa2a-f973-4f02-91bd-629e01423d00" s="G" />
+    <p i="18a3a89c-5c63-462f-8853-2f4c5fb00078" s="G" />
+    <p i="eeb68039-a326-4942-914d-86695839f66a" s="G" />
+    <!-- Cardholders -->
+    <p i="db9d9c99-f571-4202-b768-d5585b6e1614" s="G" />
+    <!-- View cardholder properties -->
+    <!-- Badge templates -->
+    <p i="2353e6de-28a3-4e7f-9ebe-9f363a234147" s="G" />
+    <!-- Modify badge template properties -->
+    <p i="64d81a2f-d488-49e0-82fd-b3cdcccbd51f" s="G" />
+    <!-- Add badge templates -->
+    <p i="a7ac056d-ee0e-46ad-9f28-1324c2f34990" s="G" />
+    <!-- Delete badge templates -->
+    <p i="b4ce6ce5-a190-48e4-b5bc-0b37a0716133" s="G" />
+    <!-- Cardholder groups -->
+    <p i="7e6d62f7-abeb-4a41-b42e-1c7f2942c42e" s="G" />
+    <!-- Modify cardholder group properties -->
+    <p i="760a7174-939f-425a-aeb1-993597d746d7" s="G" />
+    <!-- Add cardholder groups -->
+    <p i="28f168c1-e170-4f65-9e7d-b379aeeb9209" s="G" />
+    <!-- Delete cardholder groups -->
+    <p i="c3942c62-c474-4683-a424-f05b136a38ae" s="G" />
+    <!-- Modify custom fields -->
+    <!-- Credentials -->
+    <p i="7209fb2d-1943-4ce5-b8ec-24c22c68f60d" s="G" />
+    <!-- View credential properties -->
+    <p i="6cc7d53b-3087-47a7-af91-5db1cbfcd812" s="G" />
+    <!-- Modify credentials -->
+    <p i="38de2e34-3746-4922-9e10-db87407393da" s="G" />
+    <!-- Add credentials -->
+    <p i="6e49046f-d854-451f-b901-b9c40f0db99a" s="G" />
+    <!-- Add mobile credentials -->
+    <p i="14634e51-f8a0-4a46-b60a-e2fbc8f6cebc" s="G" />
+    <!-- Change status -->
+    <p i="3dc50349-a0aa-41dc-8bee-6eb2645fb5b8" s="G" />
+    <!-- Delete credentials -->
+    <p i="7dd806e0-a6c8-4c0d-90b3-2bc31dfed560" s="G" />
+    <!-- Encode smart cards -->
+    <p i="915093f3-63aa-4778-958f-c03de46de8d2" s="G" />
+    <!-- Modify cardholder/credential association -->
+    <p i="18873b3f-74c0-45bc-ba04-613020c52a7a" s="G" />
+    <!-- Modify custom fields -->
+    <p i="7aa63f35-93c4-49f0-ba0f-86720c81259a" s="G" />
+    <!-- Modify credential name -->
+    <p i="a74c018d-a184-4833-a0a0-dd2d716254f3" s="G" />
+    <!-- Print badges -->
+    <p i="0a920d11-5a74-4733-8398-e4188ef565cd" s="G" />
+    <!-- View advanced credential informations -->
+    <p i="c23cd150-6d68-4253-b09b-1c7a253554d2" s="G" />
+    <!-- View credential pin value -->
+    <p i="75be2d69-ed8b-411c-9cad-74bc623b65d2" s="G" />
+    <p i="206d057c-da4d-41d7-8090-a90b1bc340d3" s="G" />
+    <p i="d85b4380-16ee-4cef-ac41-a1795216c397" s="G" />
+    <p i="a9920d27-cae1-401d-b000-42cbf123f632" s="G" />
+    <p i="c277723c-5109-4a1c-a172-f78a4460dce0" s="G" />
+    <p i="b2df9787-6678-41ac-b4cf-d28012c4686d" s="G" />
+    <p i="a71e8cb5-af6b-481f-b285-72afa1865f93" s="G" />
+    <p i="823296ff-91e7-4242-8f70-c6e02ba8c093" s="G" />
+    <!-- Delete archived visitors -->
+    <p i="9bf029f4-5402-45be-b283-9fc5cd5da7cb" s="G" />
+    <p i="569744f6-2197-41c6-a051-e847ba3e34fb" s="G" />
+    <p i="b046c1a8-2bea-4bb1-8502-b24b324815b2" s="G" />
+    <p i="9feaff70-19e6-4285-8369-6ce7014853f5" s="G" />
+    <!-- Identical Plate Multi Vehicle report-->
+    <p i="3574d2a3-c4b7-40e4-902c-374d121625dc" s="G" />
+    <p i="c12c52fc-c40a-4a93-a1c2-2e4796971e85" s="G" />
+    <p i="3b88ce52-50cd-4a7c-88e8-ee4a7e2bd73a" s="G" />
+    <p i="6214650b-ec4a-44ba-880d-b062516f71a2" s="G" />
+    <p i="494213e6-29c3-40b3-8ad2-7f06f238ba37" s="G" />
+    <p i="f16a4577-9c4b-48c0-a303-eceae4454edf" s="G" />
+    <p i="dc0c0983-c737-4aa7-ba1e-798c4010c4e5" s="G" />
+    <!-- Cardholder management task -->
+    <p i="04621373-4bee-48db-98db-46a81593a995" s="G" />
+    <!-- Cardholder management profile export -->
+    <p i="e1fb4be7-a1dd-40e4-b5da-96bf5253d3d4" s="G" />
+    <!-- Delete rows from reports -->
+    <p i="25bc8760-d4b9-4e8c-b127-ad7a407f179b" s="G" />
+    <p i="36b1738c-71ef-4525-a77f-bd3c72ecd073" s="G" />
+    <p i="52811fa0-2a02-4c19-9c65-bb4831c2c9d3" s="G" />
+    <p i="a34a1926-32bf-4d9b-a778-5a1e73813b54" s="G" />
+    <p i="73adbba6-59bf-42ff-8ce8-7cff9e0841d4" s="G" />
+    <p i="d51cc6dc-f31a-467a-ae6b-da343b401cb5" s="G" />
+    <p i="e949531f-58ae-432d-b7f5-48b9defa2a62" s="G" />
+    <p i="77064f62-5ecc-4916-b6a1-b67849cf3421" s="G" />
+    <p i="dfd24407-8b4c-4768-8141-f8c69a3453bf" s="G" />
+    <p i="708c535c-60b2-4922-993d-937565032435" s="G" />
+    <p i="15595806-92d1-4cda-97b2-a423550862d7" s="G" />
+    <p i="c5d3f637-e9f0-4be6-a102-7945fdae4872" s="G" />
+    <p i="a52ac7f8-01b7-4fea-b05f-5da61d886791" s="G" />
+    <p i="72233940-ce2e-4508-96e7-b9a3604947a4" s="G" />
+    <!-- Display video overlays -->
+    <p i="3c043110-84f9-4513-a453-a27c9c52f7fa" s="G" />
+    <!-- override video quality -->
+    <p i="390a8e0c-498d-45ab-8b24-67f1c7dd7627" s="G" />
+    <p i="e8bb6484-f28c-4918-a4cb-9c18acb93d0c" s="G" />
+    <!-- View video stream statistics -->
+    <p i="3dd59613-3d8a-4953-ac58-139135fa9229" s="G" />
+    <!-- View video stream status -->
+    <p i="7c2d3803-46b0-4e75-ae9c-9f1b0d4525ac" s="G" />
+    <!-- Task privileges->Investigation->Video->Camera events -->
+    <p i="1959de48-e6cb-4101-92e7-4138629c0805" s="G" />
+    <!-- Task privileges->Investigation->Video->Forensic search -->
+    <p i="d9ae66a3-ea94-408c-9434-c61db6088433" s="G" />
+    <!-- Action privileges->Intrusion detection->Trigger instrusion alarm -->
+    <p i="29ff7a66-0b39-4f1f-b169-6e7dfc57b10f" s="G" />
+    <!-- Action privileges->Intrusion detection->Bypass intrusion inputs -->
+    <p i="81b04e90-6797-466f-a267-ce08c7959f97" s="G" />
+    <!-- Action privileges->Intrusion detection->Acknowledge instrusion alarm -->
+    <p i="5ab0955f-19f9-404f-9215-9d5e0dedb3fd" s="G" />
+    <!-- Action privileges->Intrusion detection->Silence instrusion alarm -->
+    <p i="5c12a7ce-017b-4aa8-918f-7257f2fcc21e" s="G" />
+    <!-- Action privileges->Intrusion detection->Reset sensors (for DMP only) -->
+    <!-- Maps -->
+    <p i="17574dde-92d5-430b-b4ab-24b50b48d063" s="G" />
+    <!-- map monitoring -->
+    <p i="f645d890-21a4-4bb8-82ff-1c58e2cd4a94" s="G" />
+    <!-- View maps -->
+    <p i="17876748-50c9-4f36-97f0-f0862d38967e" s="G" />
+    <!-- Modify layers -->
+    <p i="ed662ea4-57e3-4df5-bbb2-6e9fc5fbbf93" s="G" />
+    <!-- View mobile users -->
+    <!-- Tile plugins -->
+    <p i="1eca9a86-5cfb-4cb1-8088-4ae5bb1ac8da" s="G" />
+    <!-- Modify tile plugin properties -->
+    <p i="3bbdfcfd-bcfd-4ce5-9438-9bc0f3777840" s="G" />
+    <!-- Add tile plugins -->
+    <p i="a4eba300-e848-4e94-9bf1-ea1118ce704b" s="G" />
+    <!-- Delete tile plugins -->
+    <!--Tile Layouts-->
+    <p i="d7b40f19-5e11-4a85-b4b6-e6807d38baee" s="G" />
+    <!-- View Tile Layout-->
+    <p i="031dc559-2052-4230-9912-dfd1daceac31" s="G" />
+    <!-- Modify tile Layout -->
+    <p i="531ddb00-e9ab-4908-853e-95f59f46251b" s="G" />
+    <!-- Add Tile Layout -->
+    <p i="fa6f726f-797d-4986-ba1f-39f2b4d81e54" s="G" />
+    <!-- Delete tile Layout -->
+    <p i="a21a5c23-d214-420d-a3d9-b146f2b4e589" s="G" />
+    <!-- Web client -->
+    <p i="f37213a1-0114-4a8d-bd58-cb30bd100ec5" s="G" />
+    <!-- View charts -->
+    <p i="061f90d6-f441-4cac-8ac1-5569b380ffeb" s="G" />
+    <!-- View dashboards -->
+    <p i="fa26b771-0c1f-49ec-aee8-bde76616fbc5" s="G" />
+    <!-- Modify dashboards -->
+    <p i="99d21656-4500-4044-b715-6737f65796b2" s="G" />
+    <!--Mobile application-->
+    <p i="4f5f43d2-cb27-47ef-8ccb-be1c54ea73ee" s="G" />
+    <!-- Communications Task -->
+    <p i="6e83b976-f51d-4bd9-91e3-fefe196bcffd" s="G" />
+    <!-- Communications call panel -->
+    <p i="8949d429-5912-4088-a0f4-b22b285859ba" s="G" />
+    <!-- Communications make new call -->
+    <p i="84bc2748-506a-45b1-b49e-35e7982e3a64" s="D" />
+    <!-- Communications call transfer call -->
+    <p i="d3eea262-0109-4953-83b7-7dd3c0c71e27" s="D" />
+    <!-- Communications call reject call -->
+    <p i="41d9e2ae-4af7-413e-b62f-b08bfa8bcf0e" s="D" />
+    <!-- Communications call report task -->
+    <p i="a1df9a01-0366-4ced-bd8c-23fe2346d47b" s="G" />
+    <!--View public tasks-->
+    <p i="8355c488-fa7d-43d3-8f4e-344ccef6498d" s="G" />
+    <!-- Live hit monitoring - Web Client -->
+    <p i="905c2049-ca05-4a91-ad7c-2af373999102" s="G" />
+    <!-- Correlation report -->
+    <!-- Video Analytics -->
+    <p i="991de544-b9ef-43c7-8311-723904caef94" s="G" />
+    <!-- PrivilegeViewSecurityVideoAnalyticsReport - Kiwi -->
+    <p i="db5afdba-7895-4c51-b0b3-e2ccb1459fc8" s="G" />
+    <!-- Copy Information to Clipboard -->
+    <!-- Threat Levels -->
+    <p i="08d9fcba-ecad-4b75-b7e3-9acb8b27ba4b" s="G" />
+    <!-- Set Threat Level privilege -->
+    <p i="aae29d94-b76a-484c-afcd-d0f645e3450d" s="G" />
+    <!-- Set Systemwide Threat Level privilege -->
+    <p i="ceb1a02c-2b89-4e16-a0d0-ad1e401794a3" s="G" />
+    <!-- Reset Systemwide Minimum Security Clearance Threat Level privilege -->
+    <p i="ef5aa932-5700-4a66-8df3-ec243002eda8" s="G" />
+    <!-- Set Minimum Security Clearance Level privilege -->
+    <!-- Background Color -->
+    <p i="aa2040c4-6d95-489d-acb2-c1af2ed700f3" s="G" />
+    <!-- Set System Application Color Privilege -->
+  </Template>
+</PrivilegeTemplates>

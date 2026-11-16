@@ -1,0 +1,18 @@
+# 2. Process
+
+Use the existing MCP tools, authorization, and validation. Retrieve only what is needed for the plan and what the selected tool supports.
+
+- When needed to resolve a named target or disambiguate a supplied GUID or entity type, retrieve only the minimum identity or type fields first. Resolve the target before broader reads.
+- For cardholder, credential, visitor, or user records, use `entity_search` with `get_fields` or `get_fields_batch` and an explicit field list for necessary fields. Do not use the full `cardholder_get`, `credential_get`, `visitor_get`, `user_get`, or `entity_search` `get_entity` responses for these PII-sensitive records: they return full entity details rather than a selected projection and may include restricted values. If a required field has no selective read path, report the capability gap.
+- Some fixed-shape reports may return extra person-linked fields or may not support projection. Process only the bounded results needed, omit unnecessary details from the answer, and do not refuse solely because person-field projection is unavailable. This does not relax the restriction on stored secrets: if the only available path would retrieve a stored restricted value, report the capability gap rather than retrieving it.
+- A supplied credential value may be used as input for its specifically requested lookup through a supported safe path. `credential_search` returns `CredentialConfiguration` rows; do not call it when the raw response may contain restricted stored values unless a safe projected result has been established. If the lookup can be performed safely, return only the minimum matched owner or identity detail, without echoing the supplied value or including extra credential fields. If no safe result path is available, report the capability gap.
+- If any response unexpectedly contains a restricted stored value, do not inspect, use, or repeat it. Stop using that retrieval path and report the limitation without retrying through a broader read.
+- Use person-linked GUIDs for necessary joins without retrieving stored credential values.
+- Use names, contact data, activity, or named rows when needed for the requested person-specific answer or bounded list. Avoid unrelated enrichment and repeated broad lookups.
+- Do not retrieve or expose stored passwords, PINs, tokens, or raw credential material. A caller-supplied value may be input to the specifically requested permitted operation when existing tools support it; do not echo it unnecessarily or retrieve the corresponding stored value. If the operation can only be completed by retrieving or echoing restricted material, report that concrete capability gap without inventing a workaround or retrying broader reads. Do not retrieve `credential.custom_values` wholesale. Handle an individual custom field only where an existing tool exposes it. If a necessary custom field has an essential but unclear meaning, ask once rather than probing records in bulk.
+
+If a field or capability needed for the plan is unavailable, report the capability or coverage gap; do not describe it as a privacy refusal. If a tool returns partial results or item errors, report those separately and preserve successful results. If the caller's request moves beyond the plan, pause retrieval and re-plan the changed scope before proceeding.
+
+If the request is solely for a restricted stored secret, state that the available tools cannot provide that value. Offer one supported, task-relevant non-secret alternative if it helps answer the request; do not propose hypothetical capabilities or ask for a routine purpose statement.
+
+Prepare the response as a draft and do not send it to the caller until [Review](03-review.md) is complete.

@@ -1,0 +1,34 @@
+services:
+  mcp-server:
+    build: .
+    pull_policy: build
+    ports:
+      - "127.0.0.1:5000:5000"
+    environment:
+      - Transport__Stdio__Enabled=false
+      - Transport__Http__Enabled=true
+      - Authentication__SigningKeyProtection__Provider=FileSystem
+      - Authentication__SigningKeyProtection__KeyRingPath=/app/config/keys
+      - Kestrel__Endpoints__Https__Url=https://0.0.0.0:5000
+      - Kestrel__Endpoints__Https__Certificate__Path=/certs/server.pfx
+      # Optional values are passed through only when present in .env/the shell.
+      # Otherwise the corresponding appsettings.json value is used.
+      - Kestrel__Endpoints__Https__Certificate__Password
+      - SecurityCenter__WebSdkSettings__Hosts__0
+      - SecurityCenter__WebSdkSettings__Hosts__1
+      - SecurityCenter__WebSdkSettings__Port
+      - SecurityCenter__WebSdkSettings__UseHttps
+      - SecurityCenter__WebSdkSettings__SkipCertificateValidation
+      - SecurityCenter__WebSdkSettings__InvokeTimeoutSec
+      - Authentication__Issuer
+      - Authentication__Audience
+      - Serilog__MinimumLevel__Override__WebSdk
+    volumes:
+      - configuration:/app/config
+      - logs:/app/logs
+      - ./certs:/certs:ro
+    restart: unless-stopped
+
+volumes:
+  configuration:
+  logs:
