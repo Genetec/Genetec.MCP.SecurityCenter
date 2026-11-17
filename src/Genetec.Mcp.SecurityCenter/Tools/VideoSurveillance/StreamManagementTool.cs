@@ -58,7 +58,12 @@ public class StreamManagementTool
             {
                 var items = ManagementToolHelper.RequireItems(request.Items);
                 return await ManagementToolHelper.Update<StreamUpdateProperties>(client, items, "Stream",
-                    body => body with { Name = ManagementToolHelper.SanitizeUpdateName(body.Name) });
+                    body => body with { Name = ManagementToolHelper.SanitizeUpdateName(body.Name) },
+                    validateItem: async index =>
+                    {
+                        if (items[index].Body?.Device is { } deviceId)
+                            await client.RequireEntityType(deviceId, "items.body.device", "Device");
+                    });
             }
 
             default:
